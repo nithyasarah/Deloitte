@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+<!-- Customer customer =new Customer(); -->
+	<bean id="cust" class="com.deloitte.cms.model.Customer"
+	autowire="byName"
+	scope="singleton"
+	init-method="FirstMethod"
+	destroy-method="LastMethod"
+	> 
+	<property name="customerId" value="101"></property>
+	<property name="customerName" value="Rakesh"></property>
+	<property name="customerAddress" value="Chennai"></property>
+	<property name="billAmount" value="5000"></property>
+<!-- 	<property name="address" ref="add"></property> -->
+	 </bean>
+<!-- 	 
+ <bean id="address" class="com.deloitte.cms.model.Address"> 
+	<property name="aId" value="1852"></property>
+	<property name="city" value="Chennai"></property>
+	<property name="state" value="TamilNadu"></property>
+	
+	 </bean> -->
+	</beans>
